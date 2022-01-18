@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Page Title</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      color: #121212;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+    }
+
+    body {
+      background-image: linear-gradient(110deg, #20bae6, #8c09dd);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    div {
+      background: rgba(224, 224, 224, 0.08);
+      box-shadow: 6px 5px 11px 0 rgb(0 0 0 / 37%);
+      backdrop-filter: blur(4.5px);
+      -webkit-backdrop-filter: blur(4.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    div h1 {
+      text-align: center;
+    }
+
+    #login_box {
+      width: 80%;
+      max-width: 360px;
+      padding: 25px;
+    }
+
+    #login_box label {
+      font-size: 18px;
+    }
+
+    #login_box input {
+      padding: 0.6em;
+      border-radius: 0.5em;
+      -webkit-border-radius: 0.5em;
+      -moz-border-radius: 0.5em;
+      -ms-border-radius: 0.5em;
+      -o-border-radius: 0.5em;
+      width: 100%;
+      background: rgba(224, 224, 224, 0.08);
+      backdrop-filter: blur(4.5px);
+      border: 1px solid #121212;
+    }
+
+    #login_box input::placeholder {
+      color: #252222;
+    }
+
+    #login_box input:focus {
+      outline: none;
+      border-color: #eeeeee;
+    }
+
+    #login_box #username {
+      margin-bottom: 15px;
+    }
+
+    #login_box button {
+      margin: auto;
+      display: block;
+      margin-top: 25px;
+      width: 100%;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      padding: 4px;
+      border: 1px #121212 solid;
+      background-image: linear-gradient(270deg, #20bae6, #8c09dd);
+      box-shadow: #121212 3px 3px 5px;
+    }
+
+    #login_box button:hover {
+      transform: translateY(4px);
+      -webkit-transform: translateY(4px);
+      -moz-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+      -o-transform: translateY(4px);
+      box-shadow: #121212 1px 1px 1px;
+    }
+
+    #login_box b {
+      position: absolute;
+      right: 15px;
+      top: 8px;
+      font-size: 18px;
+    }
+
+    #login_box b:hover {
+      font-size: 24px;
+      color: orange;
+      cursor: pointer;
+    }
+
+    #login_box p {
+      text-align: center;
+      margin: 15px auto -15px auto;
+    }
+
+    a {
+      color: darkblue;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    #login_btn {
+      padding: 10px;
+      cursor: pointer;
+      border-width: 2px;
+    }
+
+    #login_btn:hover {
+      transform: translateY(5px);
+      -webkit-transform: translateY(5px);
+      -moz-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+      -o-transform: translateY(5px);
+      box-shadow: 3px 2px 5px 0 rgb(0 0 0 / 37%);
+      border: lime 2px solid;
+    }
+
+    #login_btn:active {
+      background-color: limegreen;
+    }
+
+    #login_btn p {
+      margin: 0;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="login_btn" onclick="toogle_login()">
+    <p>Login Now</p>
+  </div>
+  <div id="login_box" style="display: none;">
+
+    <b onclick="toogle_login()" title="close">&#10006</b>
+
+    <h1>Login Form</h1>
+
+    <form action="" method="get">
+      <label for="username">Username :</label> <br>
+      <input type="text" id="username" name="username" placeholder="Enter your username..." required autocomplete="off">
+      <br>
+
+      <label for="password">Password :</label> <br>
+      <input type="password" name="password" id="password" placeholder="Enter Your Password..." required>
+      <a href="#!">Forget Password?</a> <br>
+
+      <button type="submit">Login</button>
+
+      <p>Not a member? <a href="#!">Sign Up</a></p>
+    </form>
+  </div>
+  <script>
+    function toogle_login() {
+      var login_btn = document.querySelector("#login_btn");
+      var login_box = document.querySelector("#login_box");
+
+      if (login_box.style.display == "none") {
+        login_box.style.display = "block";
+        login_btn.style.display = "none";
+      } else {
+        login_box.style.display = "none";
+        login_btn.style.display = "block";
+      }
+    }
+
+
+  </script>
+</body>
+
+</html>

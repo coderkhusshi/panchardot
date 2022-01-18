@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+  background-image:url("panchar logo.png");
+  border: 2px solid;
+  height: 3vh;
+}
+nav {
+    background-color: #79B4B7;
+    overflow: hidden;
+    
+  }
+  nav a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    padding: 12px;
+    float: left;
+  }
+  nav a:hover {
+    background-color:rgb(231, 148, 148);
+    border: 1px solid;
+  }
+  nav a:visited {
+    color: rgb(0, 0, 0);
+  
+  }
+  .container {
+    width: 5vw;
+    height: 5vh;
+    border: 2px solid ;
+    background-image: url('panchar logo.png');
+    ;
+    
+    
+    
+}
+div.p{
+    word-wrap: normal;
+}
+div.img{
+  background-size: 2vh;
+}
+
+
+
+
+* {
+  font-family: "Poppins", sans-serif;
+  color: #121212;
+ 
+}
+.heade{
+border: 2px solid;
+background-color: #fdaa4c;
+font-variant: small-caps;
+}
+.title {
+  font-size: 5vh;
+  align-items: stretch;
+  margin-top: initial;
+  display: -moz-box;
+}
+
+.setting {
+  
+  border: 2px solid;
+  margin: 4vh;
+  background-position: center;
+}
+
+html,body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+body {
+  background-image: linear-gradient(110deg, #20bae6, #8c09dd);
+  display: flex;
+  align-items: flex-start;
+}
